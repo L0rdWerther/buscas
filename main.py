@@ -1,8 +1,9 @@
-from grafo_1 import grafo, heuristica
+from grafo_1 import grafo, heuristica, grid, obstaculos
 from ganancia import busca_gananciosa
 from custo import calcular_custo
 from dfs_bfs import dfs, bfs
 from dijkstra import dijkstra
+from algoritmo_a import algoritmo_a
 
 # Executa as buscas e exibe os resultados
 def executar_buscas(grafo, cidade_inicial, cidade_final):
@@ -10,6 +11,13 @@ def executar_buscas(grafo, cidade_inicial, cidade_final):
     caminho_dfs = dfs(grafo, cidade_inicial, cidade_final)
     caminho_dijkstra = dijkstra(grafo, cidade_inicial, cidade_final)
     caminho_ganancioso = busca_gananciosa(grafo, cidade_inicial, cidade_final, heuristica)
+    caminho_A = algoritmo_a(grid, cidade_inicial, cidade_final, heuristica, obstaculos)
+
+    if caminho_A:
+        custo_A = calcular_custo(grafo, caminho_A)
+        print("Caminho A*:", " -> ".join(caminho_A), "| Custo:", custo_A)
+    else:
+        print("Sem caminho A* entre", cidade_inicial, "e", cidade_final)
 
     if caminho_bfs:
         custo_bfs = calcular_custo(grafo, caminho_bfs)
