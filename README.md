@@ -1,4 +1,4 @@
-# Buscas: DFS, BFS, Dijkstra e Algoritmo Ganancioso
+# Buscas: DFS, BFS, Dijkstra, Algoritmo Ganancioso e Algoritmo A*
 
 Este repositório contém implementações em Python de diferentes algoritmos de busca, incluindo:
 
@@ -6,6 +6,7 @@ Este repositório contém implementações em Python de diferentes algoritmos de
 - **BFS (Busca em Largura)**  
 - **Dijkstra (Busca pelo Caminho Mais Curto)**  
 - **Algoritmo Ganancioso**
+- **Algoritmo A***
 
 ## Sobre o Projeto
 
